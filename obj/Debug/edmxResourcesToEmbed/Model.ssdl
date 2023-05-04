@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sales_database">
+    <Key>
+      <PropertyRef Name="Transaction_ID" />
+    </Key>
+    <Property Name="Transaction_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Subtotal" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cash" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CashChange" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Month" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Day" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Year" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="sales_database" EntityType="Self.sales_database" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
